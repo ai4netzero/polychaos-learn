@@ -150,6 +150,7 @@ def reduce_dimension(XP, y, combinations_mat, poly_type_list,
     number of random instances for calculation of variances
     '''
     # transformation of the data for calculation of
+    assert clf is not None
     float_eps = 1.0e-6
     n_input_features, n_output_features = combinations_mat.shape
 
@@ -335,7 +336,7 @@ class OrthogonalPolynomialsFeatures(BaseEstimator, TransformerMixin):
 
     def __init__(self, degree=1, dlist=[], poly_type=[], reduction=False,
                  basis_dim=20, single_iter_dim=5, niter=20, nrand=100,
-                 clf=ElasticNetCV()):
+                 clf=None):
         self.degree = degree
         self.dlist = dlist
         self.poly_type = poly_type

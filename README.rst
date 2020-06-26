@@ -41,7 +41,7 @@ Then proceed with installation of ``polychaos-learn`` using ::
 	cd polychaos-learn
 	pip install .
 
-Uninstall using using the following command ::
+Uninstall using the following command ::
 	
 	pip uninstall polychaos-learn
 
